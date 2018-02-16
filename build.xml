@@ -45,8 +45,6 @@
 
     <target name="clean-build" depends="clean,jar"/>
 
-    <target name="main" depends="clean,run"/>
-
     <target name="junit" depends="jar">
         <junit printsummary="yes">
             <classpath>
@@ -59,5 +57,7 @@
             </batchtest>
         </junit>
     </target>	
+
+    <target name="main" depends="clean,run,junit"/>
 	
 </project>
